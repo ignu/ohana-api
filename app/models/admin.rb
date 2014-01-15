@@ -1,5 +1,6 @@
 class Admin
   include Mongoid::Document
+  include ActiveModel::MassAssignmentSecurity
   # CanCan roles
   ROLES = %w(admin editor)
 

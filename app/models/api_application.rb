@@ -1,5 +1,6 @@
 class ApiApplication
   include Mongoid::Document
+  include ActiveModel::MassAssignmentSecurity
 
   before_create :generate_api_token
 

@@ -1,17 +1,20 @@
 source 'https://rubygems.org'
 
 ruby '2.0.0'
-gem 'rails', '3.2.13'
+gem 'rails', '~> 4.0'
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'sass-rails'
+  gem 'coffee-rails'
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'protected_attributes'
+
 # Front end
 gem 'jquery-rails'
-gem 'bootstrap-sass'
+gem "bootstrap-sass", "~> 2.3.2.2"
+#gem 'bootstrap-sass'
 gem "haml-rails", ">= 0.4"
 
 # Server for deployment
@@ -28,7 +31,7 @@ gem "sentry-raven", :git => "https://github.com/getsentry/raven-ruby.git"
 gem 'coveralls', require: false
 
 # MongoDB ORM
-gem "mongoid", ">= 3.1.2"
+gem "mongoid", ">= 4.0.0.alpha2"
 
 group :test, :development do
   # Testing with Rspec
@@ -69,7 +72,7 @@ gem 'rack-cors', :require => 'rack/cors'
 # API Design
 gem "grape"
 gem 'grape-entity'
-gem "kaminari", :git => "git://github.com/amatsuda/kaminari.git", :ref => "01f65e112d"
+gem "kaminari"
 
 # Caching
 #gem "garner"
@@ -100,7 +103,7 @@ gem "enumerize"
 gem "figaro"
 
 # Search
-gem "tire", :git => "git://github.com/monfresh/tire.git", :ref => "2d174e792a"
+gem "tire"
 
 # Nested categories for OpenEligibility
 gem "glebtv-mongoid_nested_set"

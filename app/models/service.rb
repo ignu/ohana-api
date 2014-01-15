@@ -1,5 +1,6 @@
 class Service
   #include RocketPants::Cacheable
+  include ActiveModel::MassAssignmentSecurity
   include Mongoid::Document
   include Mongoid::Timestamps
   include Grape::Entity::DSL

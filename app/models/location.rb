@@ -1,4 +1,5 @@
 class Location
+  include ActiveModel::MassAssignmentSecurity
   include Mongoid::Document
   include Mongoid::Timestamps
   include Mongoid::Slug
